@@ -1,0 +1,25 @@
+#!/usr/bin/python2.6
+
+import subprocess
+import os
+
+
+# change to the directory that we're in
+import inspect, os
+print inspect.getfile(inspect.currentframe()) # script filename (usually with path)
+fpath= os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) # script directory
+
+os.chdir(fpath)
+
+
+subprocess.call('python2.6 script1.py',shell=True)
+print "Installing pylucene..."
+subprocess.call('python2.6 script2.py',shell=True)
+print "Installing txtorg..."
+
+#subprocess.call('rm  -r /tmp/txtorg-master/',shell=True)
+
+#subprocess.call('rm  -r /tmp/master.zip',shell=True)
+
+
+print "Installation Complete!  To test, open Terminal and type txtorg"
