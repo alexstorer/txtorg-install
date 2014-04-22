@@ -7,7 +7,7 @@ import os.path
 
 linkdir = os.path.split(os.path.split(jcc.__file__)[0])[0]
 
-subprocess.call('sudo ln -s ' + linkdir + '/libjcc.dylib ' + '/usr/local/lib',shell=True)
+subprocess.call('sudo ln -s ' + linkdir + '/libjcc.dylib ' + '/usr/lib',shell=True)
 
 urllib.urlretrieve("https://github.com/ChristopherLucas/txtorg/archive/master.zip", "/tmp/master.zip")
 import os
